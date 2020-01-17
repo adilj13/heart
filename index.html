@@ -200,7 +200,7 @@
                                                 <option value="3">Reversable Defect</option>
                                             </select>
                                         </div>
-                                        <button id="submit" class="btnRegister">Register</button>
+                                        <button id="submit" class="btnRegister">Test</button>
                                     </div>
                                 </div>
                             </div>
@@ -273,12 +273,9 @@
             var slope = $('#slope').val();
             var ca = $('#ca').val();
             var thal = $('#thal').val();
-            var url="http://51.68.190.181:8080/?age="+age+"&sex="+sex+"&cp="+cp+"&bps="+trestbps+"&chol="+chol+"&fbs="+fbs+"&ecg="+restecg+"&thalach="+thalach+"&exang="+exang+"&oldpeak="+oldpeak+"&slope="+slope+"&ca="+ca+"&thal="+thal;
-            //console.log(url);
+            var url="//51.68.190.181:8080/?age="+age+"&sex="+sex+"&cp="+cp+"&bps="+trestbps+"&chol="+chol+"&fbs="+fbs+"&ecg="+restecg+"&thalach="+thalach+"&exang="+exang+"&oldpeak="+oldpeak+"&slope="+slope+"&ca="+ca+"&thal="+thal;
             $.getJSON( url, function( data ) {
-                //console.log(data);
                 var result=data.result;
-                //console.log(result);
                 
                 if(result=="0") {
                     alert("Congratulations! You do not have heart disease");
