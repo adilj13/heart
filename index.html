@@ -116,10 +116,10 @@
                                 <div class="row register-form">
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <input type="text" class="form-control" name="age" placeholder="Age in years *" value="" required />
+                                            <input type="text" class="form-control" id="age" placeholder="Age in years *" value="" required />
                                         </div>
                                         <div class="form-group">
-                                            <select class="form-control" name="cp" required>
+                                            <select class="form-control" id="cp" required>
                                                 <option class="hidden" selected disabled>Cheast Pain Type</option>
                                                 <option value="0">0</option>
                                                 <option value="1">1</option>
@@ -128,16 +128,16 @@
                                             </select>
                                         </div>
                                         <div class="form-group">
-                                            <input type="text" class="form-control" name="trestbps" placeholder="Resting Blood Pressure *" value="" required />
+                                            <input type="text" class="form-control" id="trestbps" placeholder="Resting Blood Pressure *" value="" required />
                                         </div>
                                         <div class="form-group">
-                                            <input type="text" class="form-control" name="chol"  placeholder="Serum Cholestoral *" value="" required />
+                                            <input type="text" class="form-control" id="chol"  placeholder="Serum Cholestoral *" value="" required />
                                         </div>
                                         <div class="form-group">
-                                            <input type="text" class="form-control" name="oldpeak" placeholder="ST depression *" value="" />
+                                            <input type="text" class="form-control" id="oldpeak" placeholder="ST depression *" value="" />
                                         </div>
                                         <div class="form-group">
-                                            <select class="form-control" name="slope" required>
+                                            <select class="form-control" id="slope" required>
                                                 <option class="hidden" selected disabled>Peak exercise ST slope</option>
                                                 <option value="0">0</option>
                                                 <option value="1">1</option>
@@ -147,11 +147,11 @@
                                         <div class="form-group">
                                             <div class="maxl">
                                                 <label class="radio inline"> 
-                                                    <input type="radio" name="gender" name="sex" value="1" checked>
+                                                    <input type="radio" name="sex" value="1" checked>
                                                     <span> Male </span> 
                                                 </label>
                                                 <label class="radio inline"> 
-                                                    <input type="radio" name="gender" name="sex" value="0">
+                                                    <input type="radio" name="sex" value="0">
                                                     <span> Female </span> 
                                                 </label>
                                             </div>
@@ -159,31 +159,31 @@
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <select class="form-control" name="fbs" required>
+                                            <select class="form-control" id="fbs" required>
                                                 <option class="hidden" selected disabled>Fasting Blood sugar > 120 mg/dl</option>
                                                 <option value="1">Yes</option>
                                                 <option value="0">No</option>
                                             </select>
                                         </div>
                                         <div class="form-group">
-                                            <select class="form-control" name="restecg" required>
+                                            <select class="form-control" id="restecg" required>
                                                 <option class="hidden" selected disabled>Resting ECG</option>
                                                 <option value="0">0</option>
                                                 <option value="1">1</option>
                                             </select>
                                         </div>
                                         <div class="form-group">
-                                            <select class="form-control" name="exang" required>
+                                            <select class="form-control" id="exang" required>
                                                 <option class="hidden" selected disabled>Exercise Induced Angina</option>
                                                 <option value="0">0</option>
                                                 <option value="1">1</option>
                                             </select>
                                         </div>
                                         <div class="form-group">
-                                            <input type="text" class="form-control" name="thalach" placeholder="Max Heart Rate *" value="" />
+                                            <input type="text" class="form-control" id="thalach" placeholder="Max Heart Rate *" value="" />
                                         </div>
                                         <div class="form-group">
-                                            <select class="form-control" name="ca" required>
+                                            <select class="form-control" id="ca" required>
                                                 <option class="hidden" selected disabled>Major vessels in flourosopy</option>
                                                 <option value="0">0</option>
                                                 <option value="1">1</option>
@@ -193,25 +193,101 @@
                                             </select>
                                         </div>
                                         <div class="form-group">
-                                            <select class="form-control" name="thal" required>
+                                            <select class="form-control" id="thal" required>
                                                 <option class="hidden" selected disabled>Cheast Pain Type</option>
                                                 <option value="1">Normal</option>
                                                 <option value="2">Fixed Defect</option>
                                                 <option value="3">Reversable Defect</option>
                                             </select>
                                         </div>
-                                        <input type="submit" class="btnRegister"  value="Register"/>
+                                        <button id="submit" class="btnRegister">Register</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
+                <p><a href="https://bootsnipp.com/snippets/dlZAN" target="_blank">Credits</a></p>
             </div>
+
+
+
+
+
+            <div class="modal fade" id="yesModal" tabindex="-1" role="dialog" aria-labelledby="yesModal" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLongTitle">Oh ho</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      You have heart disease.
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+
+
+
+              <div class="modal fade" id="noModal" tabindex="-1" role="dialog" aria-labelledby="noModal" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLongTitle">Congratulations</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      You do not have heart disease.
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
             <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script type="text/javascript">
+        $("#submit").on("click",function(){
+            $("#submit").attr("disabled", true);
+            var sex = $('input[name="sex"]:checked').val();
+            var age = $('#age').val();
+            var cp = $('#cp').val();
+            var trestbps = $('#trestbps').val();
+            var chol = $('#chol').val();
+            var fbs = $('#fbs').val();
+            var restecg = $('#restecg').val();
+            var thalach = $('#thalach').val();
+            var exang = $('#exang').val();
+            var oldpeak = $('#oldpeak').val();
+            var slope = $('#slope').val();
+            var ca = $('#ca').val();
+            var thal = $('#thal').val();
+            var url="http://51.68.190.181:8080/?age="+age+"&sex="+sex+"&cp="+cp+"&bps="+trestbps+"&chol="+chol+"&fbs="+fbs+"&ecg="+restecg+"&thalach="+thalach+"&exang="+exang+"&oldpeak="+oldpeak+"&slope="+slope+"&ca="+ca+"&thal="+thal;
+            //console.log(url);
+            $.getJSON( url, function( data ) {
+                //console.log(data);
+                var result=data.result;
+                //console.log(result);
+                
+                if(result=="0") {
+                    alert("Congratulations! You do not have heart disease");
+                } else if(result=="1") {
+                    alert("Oh ho! You are highly likely to have heart disease");
+                }
+                $("#submit").attr("disabled", false);
+            });
+        });
         </script>
     </body>
 </html>
